@@ -188,7 +188,11 @@ footer button:hover {
 @media (max-width: 768px) {
   body {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    /* --- CORRECCIÓN APLICADA AQUÍ --- */
+    grid-template-rows: auto minmax(200px, auto) minmax(200px, auto) auto minmax(
+        200px,
+        auto
+      ) minmax(200px, auto) auto;
     padding: calc(var(--spacing) / 2);
     gap: calc(var(--spacing) / 1.5);
   }
